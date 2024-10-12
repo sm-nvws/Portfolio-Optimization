@@ -1,1 +1,6 @@
-# Portfolio-Optimization
+This project is focused on optimizing a stock portfolio using genetic algorithms and Monte Carlo simulations. It begins by fetching historical stock price data from Yahoo Finance (using the yfinance library) and calculates the daily returns and volatilities for the selected stocks. Once the data is processed, the project simulates future stock price paths based on these historical values. To ensure the simulated prices are realistic, a correlation matrix is used to account for how stocks move together.
+
+The core of the project is the use of a genetic algorithm (leveraging the DEAP library) to optimize the allocation of assets in the portfolio. The goal is to maximize the Sharpe Ratio, which means finding the best balance between maximizing returns and minimizing risk. The genetic algorithm evolves over multiple generations, testing different portfolio weights to find the optimal mix of stocks.
+
+Additionally, the project calculates key risk metrics, including Value at Risk (VaR) and Expected Shortfall (ES), which provide insight into potential portfolio losses under worst-case scenarios. The results are visualized with a histogram that shows the distribution of simulated portfolio values, with markers for VaR and ES to highlight the risk.
+

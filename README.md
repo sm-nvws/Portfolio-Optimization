@@ -1,5 +1,12 @@
-This project focuses on optimizing a portfolio of stocks using genetic algorithms and calculating key risk metrics like Value at Risk (VaR) and Expected Shortfall (ES). By leveraging historical stock data from Yahoo Finance, the program computes mean returns and volatilities for each stock in a user-defined portfolio. The optimization process maximizes the portfolio’s Sharpe ratio, balancing risk and return efficiently. It uses Monte Carlo simulations to forecast possible future price paths, providing insights into the potential performance of the portfolio over a time horizon.
+This portfolio simulator models and compares actual vs optimized stock allocations using Monte Carlo methods. It pulls stock data from FinancialModelingPrep (FMP) with caching support to reduce API load. Each stock's expected return and volatility is derived from its beta, and paths are simulated using correlated t-distributed noise to better capture market extremes.
 
-A core feature of the project is its use of the DEAP library to implement a genetic algorithm for optimizing the portfolio weights. The genetic algorithm is well-suited for this type of optimization problem, as it explores a large solution space and refines the results through iterative improvements. The risk metrics are calculated after the optimization process to assess how much risk the portfolio faces in adverse market conditions. VaR and ES help investors understand potential losses at a given confidence level, making this tool valuable for managing financial risk.
+The simulation uses 1,000 trials over 252 days to assess risk metrics: Value at Risk (VaR), Expected Shortfall (ES), annualized return, volatility, and Sharpe ratio. Optimization is performed with a genetic algorithm from DEAP, constrained to valid portfolio weights summing to 1. The tool prints summary stats and visualizes the portfolio value distributions. It also suggests rebalancing actions based on the optimized weights, highlighting under-allocated assets.
 
-The project structure is designed to be modular, allowing easy customization. The user inputs the stock tickers, the number of shares they hold, and the time period for analysis. The program handles all the data fetching, correlation matrix generation, and risk-free rate adjustments. Finally, the optimized portfolio weights, simulated future price paths, and risk metrics are visualized in histograms, with the results printed in a detailed summary. 
+Run simulate_portfolio_dual({...}, "YYYY-MM-DD") with your ticker-share dictionary to analyze your portfolio.
+
+
+
+
+
+
+

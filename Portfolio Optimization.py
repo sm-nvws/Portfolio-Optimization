@@ -12,7 +12,7 @@ from deap import base, creator, tools, algorithms
 CACHE_DIR = "./cache"
 os.makedirs(CACHE_DIR, exist_ok=True)
 
-FMP_API_KEY = "omapP0bkAITjk969vNIRefx2fvRqkVc5"
+FMP_API_KEY = "KEY"
 FMP_API_URL = "https://financialmodelingprep.com/api/v3/profile"
 
 def adjust_to_business_day(date_input, forward=True):

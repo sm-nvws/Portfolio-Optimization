@@ -253,4 +253,5 @@ def simulate_portfolio_dual(portfolio_dict, start_input):
         if w < 0.01:
             print(f"Consider removing {tickers[i]} (only {w:.2%} allocation)")
 
+#example usecase
 simulate_portfolio_dual({"TSLA": 45, "NVDA": 43}, "2019-09-03")
